@@ -1,0 +1,78 @@
+.bodyland {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #054571;
+    color: white;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.content {
+    flex: 1;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 10px 0 20px;
+}
+
+p {
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #cc0000;
+}
+
+.blueprint {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+}
+
+.blueprint img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .bodyland {
+        overflow-x: hidden;
+    }
+    .container {
+        flex-direction: column;
+    }
+
+    .blueprint {
+        max-width: 100%;
+    }
+}

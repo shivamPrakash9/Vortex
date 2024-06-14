@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .blueprint svg {
+    filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.3));
+}
+
+.room {
+    fill: rgba(255, 255, 255, 0.05);
+}
+
+.window, .sofa, .tv, .table {
+    fill: rgba(255, 255, 255, 0.1);
+}
+
+.floor {
+    fill: rgba(255, 255, 255, 0.2);
+}
+
+.ceiling, .floor-line, .window-detail, .sofa-detail, .tv-stand {
+    stroke-dasharray: 5, 5;
+    stroke-width: 1;
+}
+
+.light {
+    fill: rgba(255, 255, 255, 0.8);
+    filter: blur(3px);
+}
+
+.blueprint path, .blueprint circle {
+    transition: all 0.3s ease;
+}
+
+.blueprint path:hover, .blueprint circle:hover {
+    stroke-width: 3;
+    filter: brightness(1.5);
+}
+
+.ceiling, .floor-line {
+    stroke: rgba(255, 255, 255, 0.6);
+}
+    </style>
+    <div class="blueprint">
+        <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+            <!-- Room -->
+            <path class="room" d="M50,50 L450,50 L450,250 L50,250 Z" />
+            
+            <!-- Window -->
+            <path class="window" d="M60,60 L180,60 L180,120 L60,120 Z" />
+            <path class="window-detail" d="M120,60 L120,120" />
+            
+            <!-- Floor -->
+            <path class="floor" d="M50,250 L450,250 L450,280 L50,280 Z" />
+            <path class="floor-line" d="M70,250 L70,280" />
+            <path class="floor-line" d="M140,250 L140,280" />
+            <path class="floor-line" d="M210,250 L210,280" />
+            <path class="floor-line" d="M280,250 L280,280" />
+            <path class="floor-line" d="M350,250 L350,280" />
+            <path class="floor-line" d="M420,250 L420,280" />
+    
+            <!-- Sofa -->
+            <path class="sofa" d="M200,150 L400,150 L400,230 L350,230 L350,190 L250,190 L250,230 L200,230 Z" />
+            <path class="sofa-detail" d="M220,190 L330,190" />
+            <path class="sofa-detail" d="M250,190 L250,230" />
+            <path class="sofa-detail" d="M350,190 L350,230" />
+    
+            <!-- TV -->
+            <path class="tv" d="M220,70 L320,70 L320,130 L220,130 Z" />
+            <path class="tv-stand" d="M250,130 L250,150 L290,150" />
+    
+            <!-- Ceiling -->
+            <path class="ceiling" d="M70,70 L430,70" />
+            <path class="ceiling" d="M70,50 L70,90" />
+            <path class="ceiling" d="M430,50 L430,90" />
+            
+            <!-- Lights -->
+            <circle class="light" cx="150" cy="100" r="5" />
+            <circle class="light" cx="250" cy="100" r="5" />
+            <circle class="light" cx="350" cy="100" r="5" />
+            
+            <!-- Side Table -->
+            <path class="table" d="M160,180 L190,180 L190,230 L160,230 Z" />
+        </svg>
+    </div>
+</body>
+</html>

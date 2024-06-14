@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Design Concept</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="css/navbarstyles.css"> -->
+</head>
+<body>
+
+    <!-- navbar -->
+    <div id="navbar"></div>
+    <!-- Other content here -->
+
+    <script>
+        fetch('PartialFronts/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+     <!-- navbar end -->
+    <div class="bodyland">
+        <div class="container">
+            <div class="blueprint">
+              <img src="../Vortex/image/Designer.png" alt="3D Building Blueprint">
+          </div>
+              <div class="content">
+                  <h1>INTERIOR<br>DESIGN</h1>
+                  <h2>CONCEPT</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <button id="more-btn">MORE</button>
+              </div>
+          </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="javascript/navbarscript.js"></script>
+</body>
+</html>
